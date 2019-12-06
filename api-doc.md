@@ -20,12 +20,12 @@
 ```html
 <q-chat-item
   id="001"
-  displayName="张三"
+  display-name="张三"
   avatar="/res/avatar.jpg"
-  redDotStyle="reddot"
-  noticeCount="2"
-  noticeMsg="Hello"
-  isMuted
+  red-dot-style="reddot"
+  notice-count="2"
+  notice-msg="Hello"
+  is-muted
 ></q-chat-item>
 ```
 
@@ -97,7 +97,7 @@ chatItem.addEventListener('click', () => {
 ```html
 <q-friend-item
   id="001"
-  displayName="张三"
+  display-name="张三"
   avatar="/res/avatar.jpg"
 ></q-friend-item>
 ```
@@ -155,8 +155,8 @@ friendItem.addEventListener('click', () => {
 <message-item
   content="Hello!"
   from="张三"
-  fromAvatar="/res/avatar.jpg"
-  fromSelf
+  from-avatar="/res/avatar.jpg"
+  from-self
 ></message-item>
 ```
 
@@ -263,7 +263,7 @@ mainTab.addEventListener('select', () => {
 ```html
 <q-chat-header
   title="七牛工作群"
-  groupNum="6"
+  group-num="6"
 ></q-chat-header>
 ```
 
