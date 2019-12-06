@@ -13,18 +13,20 @@
 <body>
   <q-main-tab id="tab" selected="chat">
     <div id='chat'>
-      <q-chat-list>
+      <!-- <q-chat-list>
         <q-chat-item display-name="foo" avatar="./res/avatar.jpg" notice-count="10" notice-msg="Hello!" is-muted active>
         </q-chat-item>
         <q-chat-item display-name="bar" avatar="./res/avatar-group.jpg" notice-count="99+" notice-msg="[未知消息]">
         </q-chat-item>
-      </q-chat-list>
+      </q-chat-list> -->
+      <my-chat-list source="chats" current="1" target="chats"></my-chat-list>
     </div>
     <div id='friend'>
-      <q-friend-list>
+      <!-- <q-friend-list>
         <q-friend-item active name="corol" avatar="./res/avatar.jpg"></q-friend-item>
         <q-friend-item name="bob" avatar="./res/avatar.jpg"></q-friend-item>
-      </q-friend-list>
+      </q-friend-list> -->
+      <my-friend-list source="friends" current="2" target="friends"></my-friend-list>
     </div>
   </q-main-tab>
   <div class="box chat chatRoom">
@@ -39,12 +41,5 @@
     </q-chat-view>
     <q-send-box></q-send-box>
   </div>
-
 </body>
-<script>
-  document.querySelector('#tab').addEventListener('select', event => {
-    console.log(event)
-  })
-</script>
-
 </html>

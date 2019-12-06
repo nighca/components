@@ -1,9 +1,6 @@
 import { render } from '../utils.js'
 
 class QMainTab extends HTMLElement {
-  constructor() {
-    super()
-  }
 
   static get observedAttributes() {
     return ['selected']

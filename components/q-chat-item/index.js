@@ -1,9 +1,6 @@
 import { render } from '../utils.js'
 
 class QChatItem extends HTMLElement {
-  constructor() {
-    super()
-  }
 
   get displayName() { return this.getAttribute('display-name') }
   set displayName(value) { return this.setAttribute('display-name', value) }
@@ -32,7 +29,10 @@ class QChatItem extends HTMLElement {
 
     this.querySelector('#name').innerText = this.displayName
     this.querySelector('#avatar').setAttribute('src', this.avatar)
+
+    this.querySelector('#notice-count').style.display = (this.noticeCount && this.noticeCount !== '0') ? 'block' : 'none'
     this.querySelector('#notice-count').innerText = this.noticeCount
+
     this.querySelector('#msg').innerText = this.noticeMsg
     this.querySelector('#mute').style.display = this.isMuted ? 'block' : 'none'
 

@@ -1,9 +1,6 @@
 import { render } from '../utils.js'
 
 class QMessageItem extends HTMLElement {
-  constructor() {
-    super()
-  }
 
   get content() { return this.getAttribute('content') }
   set content(value) { return this.setAttribute('content', value) }

@@ -1,9 +1,6 @@
 import { render } from '../utils.js'
 
-class ChatHeader extends HTMLElement {
-  constructor() {
-    super()
-  }
+class QChatHeader extends HTMLElement {
 
   static get observedAttributes() {
     return ['title', 'group-num']
@@ -34,4 +31,4 @@ class ChatHeader extends HTMLElement {
   }
 }
 
-customElements.define('q-chat-header', ChatHeader)
+customElements.define('q-chat-header', QChatHeader)

@@ -1,0 +1,12 @@
+import './q-chat-item/index.js'
+import './q-chat-list/index.js'
+import './q-main-tab/index.js'
+import './q-chat-header/index.js'
+import './q-friend-item/index.js'
+import './q-friend-list/index.js'
+import './q-chat-view/index.js'
+import './q-message-item/index.js'
+import './q-send-box/index.js'
+
+import './my-chat-list/index.js'
+import './my-friend-list/index.js'

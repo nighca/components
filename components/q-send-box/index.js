@@ -1,9 +1,6 @@
 import { render } from '../utils.js'
 
 class QSendBox extends HTMLElement {
-  constructor() {
-    super()
-  }
 
   get value() { return this.getAttribute('value') }
   set value(value) { return this.setAttribute('value', value) }
