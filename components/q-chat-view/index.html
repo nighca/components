@@ -1,16 +1,11 @@
-<div class="box chat chatRoom">
-  <div class="box_bd chat_bd">
-    <slot></slot>
-  </div>
+<div class="box_bd chat_bd">
+  <slot></slot>
 </div>
 
 <style>
-  .box {
+  .box_bd {
     box-sizing: border-box;
-    padding-top: 16px;
+    padding-top: 16px !important;
     overflow-y: auto;
-  }
-  .box .box_bd {
-    position: initial;
   }
 </style>

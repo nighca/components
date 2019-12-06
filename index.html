@@ -27,10 +27,17 @@
       </q-friend-list>
     </div>
   </q-main-tab>
-  <div class="chat-window">
-    <q-chat-header title="七牛工作群" group-num="6">
-      child
-    </q-chat-header>
+  <div class="box chat chatRoom">
+    <q-chat-header title="七牛工作群" group-num="6">child</q-chat-header>
+    <q-chat-view>
+      <q-message-item from="李四" content="你好啊" from-avatar="/res/avatar.jpg"></q-message-item>
+      <q-message-item from="张三" content="你好" from-avatar="/res/avatar.jpg" from-self></q-message-item>
+      <q-message-item from="李四" content="你好啊" from-avatar="/res/avatar.jpg"></q-message-item>
+      <q-message-item from="张三" content="你好" from-avatar="/res/avatar.jpg" from-self></q-message-item>
+      <q-message-item from="李四" content="你好啊" from-avatar="/res/avatar.jpg"></q-message-item>
+      <q-message-item from="张三" content="你好" from-avatar="/res/avatar.jpg" from-self></q-message-item>
+    </q-chat-view>
+    <q-send-box></q-send-box>
   </div>
 
 </body>

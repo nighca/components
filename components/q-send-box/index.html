@@ -1,25 +1,23 @@
-<div class="chat send-box-wrapper">
-  <form id="form" class="box_ft">
-    <div class="toolbar">
-      <span class="web_wechat_pic js_fileupload" title="图片和文件">
-        <input id="file-input" class="file-input" type="file" name="file">
-      </span>
-    </div>
-    <div class="content">
-      <pre id="edit-area" class="flex edit_area" contenteditable="true"></pre>
-    </div>
-    <div class="action">
-      <button type="submit" class="btn btn_send">发送</button>
-    </div>
-  </form>
-</div>
+<form id="form" class="box_ft">
+  <div class="toolbar">
+    <span class="web_wechat_pic js_fileupload" title="图片和文件">
+      <input id="file-input" class="file-input" type="file" name="file">
+    </span>
+  </div>
+  <div class="content">
+    <pre id="edit-area" class="flex edit_area" contenteditable="true"></pre>
+  </div>
+  <div class="action">
+    <button type="submit" class="btn btn_send">发送</button>
+  </div>
+</form>
 
 <style>
+.box_ft {
+  margin-left: 19px
+}
 .send-box-wrapper {
   background-color: #fff;
-}
-.box_ft {
-  position: static;
 }
 .file-input {
   opacity: 0;
