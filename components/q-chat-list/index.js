@@ -1,10 +1,10 @@
-import { importHTML, useTemplate } from '../utils.js'
+import { render } from '../utils.js'
 
 class QChatList extends HTMLElement {
   update() {}
 
   async connectedCallback() {
-    await useTemplate(this, '/components/q-chat-list/index.html')
+    await render(this, '/components/q-chat-list/index.html')
     this.update()
   }
 }

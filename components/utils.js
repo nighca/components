@@ -6,7 +6,7 @@ export async function importHTML(url) {
   return template.content.cloneNode(true)
 }
 
-export async function useTemplate(node, templateUrl) {
+export async function render(node, templateUrl) {
   const content = await importHTML(templateUrl)
   const childNodes = Array.from(node.childNodes.values())
   node.innerHTML = ''
@@ -14,7 +14,6 @@ export async function useTemplate(node, templateUrl) {
   node.appendChild(content)
   if (slot) {
     childNodes.forEach(childNode => {
-      console.log(childNode)
       slot.appendChild(childNode)
     })
   }

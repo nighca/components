@@ -37,31 +37,27 @@
 
 ##### `displayName`
 
-`string`
+`string`: chat 名
 
 ##### `avatar`
 
-`string`, avatar url
-
-##### `redDotStyle`
-
-`string`, "reddot" (isMuted) | "reddot_bbig" (noticeCount >=99) | "reddot_middle"
+`string`, 头像图片 url
 
 ##### `noticeCount`
 
-`string`, notice message count, can be int(N) | string("99+")
+`number` | `string`, 未读消息数，数字(N)或字符串("99+")
 
 ##### `noticeMsg`
 
-`string`, notice message
+`string`, 未读消息内容
 
 ##### `isMuted`
 
-`bool`, is muted
+`bool`, 是否静音
 
 ##### `active`
 
-`bool`, is active
+`bool`, 是否被选中
 
 ### Events
 
