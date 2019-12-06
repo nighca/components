@@ -12,23 +12,30 @@ class QMainTab extends HTMLElement {
   update() {
     if (!this.rendered) return
 
-    const chat = this.querySelector('#chat')
-    const friend = this.querySelector('#friend')
+    // 航天飞机编码风格...
+    const chat = this.querySelector('#chat-item')
+    const friend = this.querySelector('#friend-item')
     const chatIcon = this.querySelector('#chat-icon')
     const friendIcon = this.querySelector('#friend-icon')
+    const chatContent = this.querySelector('#chat')
+    const friendContent = this.querySelector('#friend')
 
     chat.classList.remove('selected')
     friend.classList.remove('friend')
+    chatContent.style.display = 'none'
+    friendContent.style.display = 'none'
     chatIcon.classList.remove('web_wechat_tab_chat_hl')
     friendIcon.classList.remove('web_wechat_tab_friends_hl')
 
     switch (this.selected) {
       case 'chat':
         chat.classList.add('selected')
+        chatContent.style.display = 'block'
         chatIcon.classList.add(chatIcon.classList[0] + '_hl')
         break;
       case 'friend':
         friend.classList.add('selected')
+        friendContent.style.display = 'block'
         friendIcon.classList.add(friendIcon.classList[0] + '_hl')
         break;
     }
@@ -45,10 +52,8 @@ class QMainTab extends HTMLElement {
   }
 
   handleEventListener() {
-    this.querySelector('#chat').addEventListener('click', () => {
-      this.selected = 'chat'
-    })
-    this.querySelector('#friend').addEventListener('click', () => this.selected = 'friend')
+    this.querySelector('#chat-item').addEventListener('click', () => this.selected = 'chat')
+    this.querySelector('#friend-item').addEventListener('click', () => this.selected = 'friend')
   }
 
   triggerEventListener() {
