@@ -8,13 +8,14 @@ export async function importHTML(url) {
 
 export async function useTemplate(node, templateUrl) {
   const content = await importHTML(templateUrl)
-  const childNodes = node.childNodes
+  const childNodes = Array.from(node.childNodes.values())
+  node.innerHTML = ''
   const slot = content.querySelector('slot')
   node.appendChild(content)
   if (slot) {
-    for (const childNode of childNodes.values()) {
-      node.removeChild(childNode)
+    childNodes.forEach(childNode => {
+      console.log(childNode)
       slot.appendChild(childNode)
-    }
+    })
   }
 }
