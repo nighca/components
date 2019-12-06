@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,24 @@
   <link rel="stylesheet" href="./main.css">
   <script type="module" src="./index.js"></script>
 </head>
+
 <body>
-  <q-chat-list>
-    <q-chat-item display-name="foo" avatar="./res/avatar.jpg" notice-count="10" notice-msg="Hello!" is-muted active></q-chat-item>
-    <q-chat-item display-name="bar" avatar="./res/avatar-group.jpg" notice-count="99+" notice-msg="[未知消息]"></q-chat-item>
-  </q-chat-list>
+  <q-main-tap id="tap" selected="chat">
+    <q-chat-list>
+      <q-chat-item display-name="foo" avatar="./res/avatar.jpg" notice-count="10" notice-msg="Hello!" is-muted active>
+      </q-chat-item>
+      <q-chat-item display-name="bar" avatar="./res/avatar-group.jpg" notice-count="99+" notice-msg="[未知消息]">
+      </q-chat-item>
+    </q-chat-list>
+  </q-main-tap>
+  <q-chat-header title="七牛工作群" group-num="6">
+    child
+  </q-chat-header>
 </body>
+<script>
+  document.querySelector('#tap').addEventListener('select', event => {
+    console.log(event)
+  })
+</script>
+
 </html>

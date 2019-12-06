@@ -1,0 +1,21 @@
+<div class="panel">
+  <div id="main-tab" class="tab">
+    <div class="tab_item">
+      <a id="chat" class="chat" title="聊天" href="#">
+        <i id="chat-icon" class="web_wechat_tab_chat web_wechat_tab_chat_hl"></i>
+      </a>
+    </div>
+    <div class="tab_item no_extra">
+      <a id="friend" class="friend" title="通讯录" href="#">
+        <i id="friend-icon" class="web_wechat_tab_friends"></i>
+      </a>
+    </div>
+  </div>
+  <slot></slot>
+</div>
+
+<style>
+  .tab_item {
+    width: 50% !important;
+  }
+</style>
