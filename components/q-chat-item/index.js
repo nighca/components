@@ -8,7 +8,7 @@
 // isSelected: true,
 // isMuted: false
 
-import { importHTML, useTemplate } from './utils.js'
+import { importHTML, useTemplate } from '../utils.js'
 
 class QChatItem extends HTMLElement {
   constructor() {
@@ -27,7 +27,7 @@ class QChatItem extends HTMLElement {
   }
 
   async connectedCallback() {
-    await useTemplate(this, './q-chat-item.html')
+    await useTemplate(this, '/components/q-chat-item/index.html')
     this.udpate()
   }
 }
