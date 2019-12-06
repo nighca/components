@@ -100,11 +100,7 @@ chatItem.addEventListener('click', () => {
 
 ### Attributes / Properties
 
-##### `id`
-
-`string`
-
-##### `displayName`
+##### name
 
 `string`
 
