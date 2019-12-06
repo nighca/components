@@ -13,7 +13,7 @@ class ChatHeader extends HTMLElement {
     if (!this.rendered) return
     const titleName = this.querySelector('#title_name')
     const titleCount = this.querySelector('#title_count')
-    titleCount.innerText = this.groupNum
+    titleCount.innerText = `(${this.groupNum})`
     titleName.innerText = this.title
   }
 

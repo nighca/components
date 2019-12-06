@@ -63,4 +63,4 @@ class QMainTab extends HTMLElement {
   }
 }
 
-customElements.define('q-main-tap', QMainTab)
+customElements.define('q-main-tab', QMainTab)
