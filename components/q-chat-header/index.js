@@ -25,7 +25,7 @@ class QChatHeader extends HTMLElement {
   }
 
   async connectedCallback() {
-    await render(this, '/components/q-chat-header/index.html')
+    await render(this, './index.html', import.meta.url)
     this.rendered = true
     this.update()
   }

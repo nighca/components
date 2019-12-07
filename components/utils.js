@@ -6,7 +6,10 @@ export async function importHTML(url) {
   return template.content.cloneNode(true)
 }
 
-export async function render(node, templateUrl) {
+export async function render(node, templateUrl, baseUrl) {
+  if (baseUrl != null) {
+    templateUrl = new URL(templateUrl, baseUrl).href
+  }
   const content = await importHTML(templateUrl)
   const childNodes = Array.from(node.childNodes.values())
   node.innerHTML = ''

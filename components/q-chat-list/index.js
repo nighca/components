@@ -4,7 +4,7 @@ class QChatList extends HTMLElement {
   update() {}
 
   async connectedCallback() {
-    await render(this, '/components/q-chat-list/index.html')
+    await render(this, './index.html', import.meta.url)
     this.update()
   }
 }

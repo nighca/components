@@ -29,7 +29,7 @@ class QFriendItem extends HTMLElement {
   }
 
   async connectedCallback() {
-    await render(this, '/components/q-friend-item/index.html')
+    await render(this, './index.html', import.meta.url)
     this.rendered = true
     this.udpate()
   }

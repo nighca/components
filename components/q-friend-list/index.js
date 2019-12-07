@@ -4,7 +4,7 @@ class QFriendList extends HTMLElement {
   update() {}
 
   async connectedCallback() {
-    await render(this, '/components/q-friend-list/index.html')
+    await render(this, './index.html', import.meta.url)
     this.update()
   }
 }

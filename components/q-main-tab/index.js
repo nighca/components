@@ -58,7 +58,7 @@ class QMainTab extends HTMLElement {
   }
 
   async connectedCallback() {
-    await render(this, '/components/q-main-tab/index.html')
+    await render(this, './index.html', import.meta.url)
     this.handleEventListener()
     this.rendered = true
     this.update()

@@ -33,7 +33,7 @@ class QSendBox extends HTMLElement {
   }
 
   async connectedCallback() {
-    await render(this, '/components/q-send-box/index.html')
+    await render(this, './index.html', import.meta.url)
     this.rendered = true
     this.udpate()
 
